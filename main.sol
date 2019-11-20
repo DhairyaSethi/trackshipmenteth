@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.5.30;
 
 contract BlockTracking {
     // state variables
