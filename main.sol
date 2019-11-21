@@ -65,3 +65,11 @@ contract BlockTracking {
         f = trackers[_trackingNo].orderStatus;
     }
 }
+
+function changeShipper(address _provider) public returns (bool) {
+        if (_provider == shipper) revert();
+        if (_provider == address(0)) revert();
+        if (msg.sender != shipper) revert();
+        shipper = _provider;
+        return true;
+    }
